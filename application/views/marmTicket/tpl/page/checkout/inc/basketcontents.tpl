@@ -10,7 +10,6 @@
     <table id="basket" class="basketitems[{if $oViewConf->getActiveClassName() == 'order' }] orderBasketItems[{/if}]">
         <colgroup>
             [{if $editable }]<col class="editCol">[{/if}]
-            <col class="thumbCol">
             <col>
             [{if $oView->isWrapping() }]<col class="wrappingCol">[{/if}]
             <col class="coutCol">
@@ -22,7 +21,6 @@
         <thead>
             <tr>
                 [{if $editable }]<th></th>[{/if}]
-                <th></th>
                 <th>[{ oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_PRODUCT" }]</th>
                 [{if $oView->isWrapping() }]
                 <th>[{ oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_WRAPPING" }]</th>
@@ -51,15 +49,6 @@
                                 <input type="checkbox" name="aproducts[[{ $basketindex }]][remove]" value="1">
                             </td>
                         [{/if}]
-                    [{/block}]
-
-                    [{block name="checkout_basketcontents_basketitem_image"}]
-                        [{* product image *}]
-                        <td class="basketImage">
-                            <a href="[{$basketitem->getLink()}]" rel="nofollow">
-                                <img src="[{$basketitem->getIconUrl()}]" alt="[{$basketitem->getTitle()|strip_tags}]">
-                            </a>
-                        </td>
                     [{/block}]
 
                     [{block name="checkout_basketcontents_basketitem_titlenumber"}]
@@ -249,7 +238,6 @@
                   [{ if $oCard }]
                     <tr>
                       [{if $editable }]<td></td>[{/if}]
-                      <td></td>
                       <td id="orderCardTitle" colspan="3">[{ oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_GREETINGCARD" }] "[{ $oCard->oxwrapping__oxname->value }]"
                           <br>
                           <b>[{ oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_YOURMESSAGE" }]</b>
