@@ -62,3 +62,7 @@ body {
     width:100px;
     text-align:center;
 }
+
+.nextStep {
+    margin-right:10px;
+}
