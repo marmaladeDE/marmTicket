@@ -1,0 +1,64 @@
+/* 
+    Document   : marmTicket
+    Created on : 01.01.2013, 19:37:32
+    Author     : Joscha Krug <krug@marmalade.de>
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body { 
+    background: #DFDFD0;
+}
+
+#page,
+#content {
+    width: 580px;
+    overflow: hidden;
+}
+
+#productsList {
+    width: 565px;
+    margin: 5px;
+    border: solid 1px #333;
+}
+
+#productsList td {
+    padding:5px 5px 10px 5px;
+    border-top: solid 1px #333;
+}
+
+#productsList td.last {
+    border:none;
+    padding-bottom: 5px;
+}
+
+#basenavigation {
+    clear: both;
+    height:55px;
+}
+
+.error {
+    clear:both;
+}
+
+#basenavigation ul {
+    list-style: none;
+    display:block;
+    padding:0;
+    margin:10px;
+    float:left;
+}
+
+#basenavigation ul li {
+    display: block;
+    width:100px;
+    padding:5px;
+    margin:0;
+    float: left;
+}
+
+#basenavigation ul li a {
+    display:block;
+    width:100px;
+    text-align:center;
+}
