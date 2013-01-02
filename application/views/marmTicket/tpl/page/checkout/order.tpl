@@ -117,6 +117,16 @@
                                             <span>T-Shirt:</span>[{$visitor.tshirt}]<br />
                                         </div>
                                     [{/foreach}]
+                                <div class="clear" style="float:left; width:100%">
+                                      <form action="[{ $oViewConf->getSslSelfLink() }]" method="post">
+                                              <br />
+                                              [{ $oViewConf->getHiddenSid() }]
+                                              <input type="hidden" name="cl" value="basket">
+                                              <input type="hidden" name="fnc" value="">
+                                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="submitButton largeButton">[{ oxmultilang ident="PAGE_CHECKOUT_ORDER_MODIFY4" }]</button>
+
+                                      </form>
+                                  </div>
                                 </dd>
                             </dl>
                         [{/if}]
@@ -145,7 +155,7 @@
                         <h3 class="section">
                             <strong>[{ oxmultilang ident="PAGE_CHECKOUT_ORDER_BASKET" }]</strong>
                             [{ $oViewConf->getHiddenSid() }]
-                            <input type="hidden" name="cl" value="basket">
+                            <input type="hidden" name="cl" value="start">
                             <input type="hidden" name="fnc" value="">
                             <button type="submit" class="submitButton largeButton">[{ oxmultilang ident="PAGE_CHECKOUT_ORDER_MODIFY4" }]</button>
                         </h3>
