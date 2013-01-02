@@ -17,9 +17,16 @@ class marm_ticketsystem_oxbasket extends marm_ticketsystem_oxbasket_parent {
     }
     
     
-    public function getVisitorData()
+    public function getVisitorData($sData=false)
     {
-        $sVisitorData = oxSession::getVar('ordrem');
+        if($sData)
+        {
+            $sVisitorData = $sData;
+        }
+        else
+        {
+            $sVisitorData = oxSession::getVar('ordrem');
+        }
         
         $aVisitorData = unserialize($sVisitorData);
         
