@@ -32,13 +32,16 @@ body {
     padding-bottom: 5px;
 }
 
+.error {
+    clear:both;
+}
+
 #basenavigation {
     clear: both;
     height:55px;
-}
-
-.error {
-    clear:both;
+    border-bottom:solid 1px #333;
+    overflow:hidden;
+    margin-bottom:20px;
 }
 
 #basenavigation ul {
@@ -51,16 +54,42 @@ body {
 
 #basenavigation ul li {
     display: block;
-    width:100px;
-    padding:5px;
+    width:111px;
+    padding:0;
     margin:0;
     float: left;
 }
 
 #basenavigation ul li a {
     display:block;
-    width:100px;
     text-align:center;
+    border:solid 1px #333;
+    padding:5px;
+    background: #F0F0E1;
+    margin-right:-1px;
+}
+
+#basenavigation ul li a.passed {
+    background:#9AAA80;
+}
+
+#basenavigation ul li a.active {
+    display:block;
+    text-align:center;
+    border:solid 1px #333;
+    padding:7px;
+    background: #7AA040;
+    color:white;
+    position:relative;
+    top:-2px;
+    left:-2px;
+    z-index:1000;
+    width:102px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#basenavigation ul li a strong {
+    font-size:18px;
 }
 
 .nextStep {

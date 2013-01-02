@@ -18,16 +18,16 @@
             <a href="[{$oViewConf->getHomeLink()}]" title="Startseite" [{if $active == 0}]class="active"[{elseif $active > 0}]class="passed"[{/if}]><strong>1.</strong><br />Tickets & Pakete</a>
         </li>
         <li>
-            <a href="[{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=basket" }]"  title="Teilnehmerdaten" [{if $active == 1}]class="active"[{elseif $active > 1}]class="passed"[{/if}]><strong>2.</strong><br />Teilnehmerdaten</a>
+            <a href="[{if 0 != $oxcmp_basket->getItemsCount()}][{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=basket" }][{else}]#[{/if}]"  title="Teilnehmerdaten" [{if $active == 1}]class="active"[{elseif $active > 1}]class="passed"[{/if}]><strong>2.</strong><br />Teilnehmerdaten</a>
         </li>
         <li>
-            <a href="[{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=user" }]" title="Ihre Rechnungsdaten" [{if $active == 2}]class="active"[{elseif $active > 2}]class="passed"[{/if}]><strong>3.</strong><br />Rechnungsdaten </a>
+            <a href="[{if 0 != $oxcmp_basket->getItemsCount()}][{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=user" }][{else}]#[{/if}]" title="Ihre Rechnungsdaten" [{if $active == 2}]class="active"[{elseif $active > 2}]class="passed"[{/if}]><strong>3.</strong><br />Rechnungsdaten </a>
         </li>
         <li>
-            <a href="[{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=payment" }]" title="Zahlart wählen" [{if $active == 3}]class="active"[{elseif $active > 3}]class="passed"[{/if}]><strong>4.</strong><br />Zahlungsart</a>
+            <a href="[{if $oxcmp_user}][{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=payment" }][{else}]#[{/if}]" title="Zahlart wählen" [{if $active == 3}]class="active"[{elseif $active > 3}]class="passed"[{/if}]><strong>4.</strong><br />Zahlungsart</a>
         </li>
         <li>
-            <a href="[{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=order" }]" title="Bestellbestätigung" [{if $active == 4}]class="active"[{elseif $active > 4}]class="passed"[{/if}]><strong>5.</strong><br />Abschluß</a>
+            <a href="[{if $oxcmp_user}][{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=order" }][{else}]#[{/if}]" title="Bestellbestätigung" [{if $active == 4}]class="active"[{elseif $active > 4}]class="passed"[{/if}]><strong>5.</strong><br />Abschluß</a>
         </li>
     </ul>
 </div>
