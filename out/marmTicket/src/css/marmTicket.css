@@ -155,3 +155,117 @@ div.lineBox span.title {
 #orderAddress dl.orderRemarks {
     width:370px;
 }
+
+.agb a,
+div.lineBox span.title {
+    color:#5B7531;
+}
+
+.submitButton,
+.submitButton:hover,
+div.lineBox span.title {
+    text-shadow:none;
+}
+
+/* Coloradjustments */
+
+.lightHead,
+h2.lightHead,
+h3.lightHead {
+    background: -moz-linear-gradient(#e0f1f5, #b8dde6);
+    background: -ms-linear-gradient(#e0f1f5, #b8dde6);
+    background: -webkit-gradient(linear, left top, left bottom, from(#e0f1f5), to(#b8dde6));
+    background: -webkit-linear-gradient(#e0f1f5, #b8dde6);
+    background: -o-linear-gradient(#e0f1f5, #b8dde6);
+    background: linear-gradient(#e0f1f5, #b8dde6);
+}
+
+.FXgradBlueDark,
+.submitButton {
+    background: -moz-linear-gradient(#7AA040, #66823A);
+    background: -ms-linear-gradient(#7AA040, #66823A);
+    background: -webkit-gradient(linear, left top, left bottom, from(#7AA040), to(#66823A));
+    background: -webkit-linear-gradient(#7AA040, #66823A);
+    background: -o-linear-gradient(#7AA040, #66823A);
+    background: linear-gradient(#7AA040, #66823A);
+}
+
+.FXgradGreyLight,
+.sf-menu li ul,
+#footer #panel,
+.box ul,
+.box ol,
+.box .content,
+.loginForm,
+#currencies,
+#languages,
+.flyoutMenu,
+.basketFlyout,
+div.anythingSlider .arrow,
+.thumbNav{
+    background: -moz-linear-gradient(#fff, #d1d8db);
+    background: -ms-linear-gradient(#fff, #d1d8db);
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#d1d8db));
+    background: -webkit-linear-gradient(#fff, #d1d8db);
+    background: -o-linear-gradient(#fff, #d1d8db);
+    background: linear-gradient(#fff, #d1d8db);
+}
+
+#userBackStepTop,
+#userBackStepBottom,
+#paymentBackStepBottom,
+#orderAddress .submitButton,
+#orderPayment .submitButton,
+#orderEditCart .submitButton,
+.lineBox a.prevStep.submitButton
+{
+    background: -moz-linear-gradient(#BFBFBF, #878787);
+    background: -ms-linear-gradient(#BFBFBF, #878787);
+    background: -webkit-gradient(linear, left top, left bottom, from(#BFBFBF), to(#878787));
+    background: -webkit-linear-gradient(#BFBFBF, #878787);
+    background: -o-linear-gradient(#BFBFBF, #878787);
+    background: linear-gradient(#BFBFBF, #878787);
+}
+
+/* Orange */
+.FXgradOrange,
+.removeButton,
+.sf-menu li.current,
+.sf-menu li.sfHover, .sf-menu li:hover,
+.gridView div.priceBox:hover,
+.gridView div.titleBox:hover,
+.featuredList a:hover,
+.featuredList li.articleImage:hover + li.articleTitle > a,
+#footer .list a:hover,
+#currencies a:hover,
+#languages a:hover,
+.flyoutMenu a:hover,
+.submitButton:hover,
+.basketFlyout li a:hover,
+.dropDown ul a:hover,
+div.anythingSlider span.arrow:hover,
+.thumbNav a:hover,
+.itemSlider .prevItem:hover span.slideBg,
+.itemSlider .nextItem:hover span.slideBg,
+a.viewAllHover,
+.itemSlider li a.viewAllHover,
+.specBoxTitles a.title:hover,
+.actionLinks li:hover {
+    background: -moz-linear-gradient(#ff8604, #ec6105);
+    background: -ms-linear-gradient(#ff8604, #ec6105);
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff8604), to(#ec6105));
+    background: -webkit-linear-gradient(#ff8604, #ec6105);
+    background: -o-linear-gradient(#ff8604, #ec6105);
+    background: linear-gradient(#ff8604, #ec6105);
+}
+
+/* Light blue */
+.FXgradBlueLight, .fbEnableButton {
+    background: #ffffff url("../bg/svg/grad_light_blue.svg");
+    background: -moz-linear-gradient(#fff, #d7e3f1);
+    background: -ms-linear-gradient(#fff, #d7e3f1);
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#d7e3f1));
+    background: -webkit-linear-gradient(#fff, #d7e3f1);
+    background: -o-linear-gradient(#fff, #d7e3f1);
+    background: linear-gradient(#fff, #d7e3f1);
+}
