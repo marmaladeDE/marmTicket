@@ -16,4 +16,14 @@ class marm_ticketsystem_oxbasket extends marm_ticketsystem_oxbasket_parent {
         return $iAllTicketSum;
     }
     
+    
+    public function getVisitorData()
+    {
+        $sVisitorData = oxSession::getVar('ordrem');
+        
+        $aVisitorData = unserialize($sVisitorData);
+        
+        return $aVisitorData;
+    }
+    
 }

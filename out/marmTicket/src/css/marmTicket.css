@@ -118,6 +118,7 @@ body {
     float:left;
     display:block;
     width:150px;
+    margin-right:10px;
 }
 
 .checkoutCollumns .collumn {
@@ -136,4 +137,21 @@ div.lineBox span.title {
 
 .smallFont {
     width: 265px;
+}
+
+.visitorshortview {
+    float:left;
+    margin:10px 10px 0 0;
+    width:175px;
+    overflow:hidden;
+    height:85px;
+}
+
+.visitorshortview span {
+    display:inline-block;
+    width:50px;
+}
+
+#orderAddress dl.orderRemarks {
+    width:370px;
 }

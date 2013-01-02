@@ -76,24 +76,6 @@
                     </div>
                 [{/if}]
 
-                [{block name="checkout_order_vouchers"}]
-                    [{ if $oViewConf->getShowVouchers() && $oxcmp_basket->getVouchers()}]
-                        [{ oxmultilang ident="PAGE_CHECKOUT_ORDER_USEDCOUPONS" }]
-                        <div>
-                            [{foreach from=$Errors.basket item=oEr key=key }]
-                                [{if $oEr->getErrorClassType() == 'oxVoucherException'}]
-                                    [{ oxmultilang ident="PAGE_CHECKOUT_ORDER_COUPONNOTACCEPTED1" }] [{ $oEr->getValue('voucherNr') }] [{ oxmultilang ident="PAGE_CHECKOUT_ORDER_COUPONNOTACCEPTED2" }]<br>
-                                    [{ oxmultilang ident="PAGE_CHECKOUT_ORDER_REASON" }]
-                                    [{ $oEr->getOxMessage() }]<br>
-                                [{/if}]
-                            [{/foreach}]
-                            [{foreach from=$oxcmp_basket->getVouchers() item=sVoucher key=key name=aVouchers}]
-                                [{ $sVoucher->sVoucherNr }]<br>
-                            [{/foreach }]
-                        </div>
-                    [{/if}]
-                [{/block}]
-
                 [{block name="checkout_order_address"}]
                     <div id="orderAddress">
                         <form action="[{ $oViewConf->getSslSelfLink() }]" method="post">
@@ -123,9 +105,18 @@
 
                         [{if $oView->getOrderRemark() }]
                             <dl class="orderRemarks">
-                                <dt>[{ oxmultilang ident="PAGE_CHECKOUT_ORDER_WHATIWANTEDTOSAY" }]</dt>
+                                <dt>Ihre Tickets werden für folgende Teilnehmer registriert:</dt>
                                 <dd>
-                                    [{ $oView->getOrderRemark() }]
+                                    [{*assign var="aVisitorData" value=$oxcmp_basket->getVisitorData()*}]
+                                    [{foreach from=$oxcmp_basket->getVisitorData() item="visitor" key="number"}]
+                                        <div class="visitorshortview">
+                                            <strong>[{$number-1}]. Teilnemer</strong><br />
+                                            <span>Name:</span>[{$visitor.fname}] [{$visitor.lname}]<br />
+                                            <span>Twitter:</span>[{$visitor.twitter}]<br />
+                                            <span>Position:</span>[{$visitor.position}]<br />
+                                            <span>T-Shirt:</span>[{$visitor.tshirt}]<br />
+                                        </div>
+                                    [{/foreach}]
                                 </dd>
                             </dl>
                         [{/if}]
@@ -134,20 +125,6 @@
                 [{/block}]
 
                 [{block name="shippingAndPayment"}]
-                    <div id="orderShipping">
-                    <form action="[{ $oViewConf->getSslSelfLink() }]" method="post">
-                        <h3 class="section">
-                            <strong>[{ oxmultilang ident="PAGE_CHECKOUT_ORDER_SHIPPINGCARRIER" }]</strong>
-                            [{ $oViewConf->getHiddenSid() }]
-                            <input type="hidden" name="cl" value="payment">
-                            <input type="hidden" name="fnc" value="">
-                            <button type="submit" class="submitButton largeButton">[{ oxmultilang ident="PAGE_CHECKOUT_ORDER_MODIFY2" }]</button>
-                        </h3>
-                    </form>
-                    [{assign var="oShipSet" value=$oView->getShipSet() }]
-                    [{ $oShipSet->oxdeliveryset__oxtitle->value }]
-                    </div>
-
                     <div id="orderPayment">
                         <form action="[{ $oViewConf->getSslSelfLink() }]" method="post">
                             <h3 class="section">

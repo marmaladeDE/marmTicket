@@ -11,4 +11,17 @@ class marm_ticketsystem_oxcmp_basket extends marm_ticketsystem_oxcmp_basket_pare
         return $return;
     }
     
+    
+    public function addVisitorData()
+    {
+        
+        $aVisitorData = oxConfig::getParameter( 'persparam' );
+        
+        $sVisitorData = serialize($aVisitorData);
+        
+        oxSession::setVar( 'ordrem', $sVisitorData );
+    }
+    
+    
+    
 }

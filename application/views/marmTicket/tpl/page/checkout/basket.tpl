@@ -9,12 +9,14 @@
                 <div class="status corners error">[{ oxmultilang ident="PAGE_CHECKOUT_BASKET_EMPTYSHIPPINGCART" }]</div>
             [{/block}]
         [{else }]
-            [{include file="page/checkout/inc/visitordata.tpl" editable=true}]
+            
 
             [{block name="basket_btn_next_bottom"}]
                 <form action="[{ $oViewConf->getSslSelfLink() }]" method="post">
+                    [{include file="page/checkout/inc/visitordata.tpl" editable=true}]
                     [{ $oViewConf->getHiddenSid() }]
                     <input type="hidden" name="cl" value="user">
+                    <input type="hidden" name="fnc" value="addVisitorData">
                     <button type="submit" class="submitButton largeButton nextStep">[{ oxmultilang ident="PAGE_CHECKOUT_BASKET_NEXTSTEP" }]</button>
                 </form>
             [{/block}]
