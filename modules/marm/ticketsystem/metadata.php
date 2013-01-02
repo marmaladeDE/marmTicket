@@ -29,7 +29,8 @@ $aModule = array(
     'email'         => 'support@marmalade.de',
     
     'extend'        => array(
-        'oxbasket'  => 'marm/ticketsystem/application/model/marm_ticketsystem_oxbasket',
+        'oxbasket'      => 'marm/ticketsystem/application/model/marm_ticketsystem_oxbasket',
+        'oxcmp_basket'  => 'marm/ticketsystem/application/controller/marm_ticketsystem_oxcmp_basket',
     ),
   
     'files'         => array(

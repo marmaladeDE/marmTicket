@@ -35,7 +35,7 @@
                 [{if $owishid}]
                     <input type="hidden" name="owishid" value="[{$owishid}]">
                 [{/if}]
-                <input type="hidden" name="fnc" value="changebasket">
+                <input type="hidden" name="fnc" value="tobasket">
                 <input type="hidden" name="aid" value="[{ $product->oxarticles__oxid->value }]">
                 [{if $altproduct}]
                     <input type="hidden" name="anid" value="[{ $altproduct }]">
