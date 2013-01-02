@@ -14,7 +14,7 @@
  <tr class="productData">
     <td>
         <h2>[{ $product->oxarticles__oxtitle->value }]</h2>
-        [{ $product->oxarticles__oxshortdesc->value }]
+        <div class="prodshortdesc">[{ $product->oxarticles__oxshortdesc->value }]</div>
     </td>
     <td>
    [{assign var='_productLink' value='#'}]

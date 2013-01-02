@@ -32,6 +32,10 @@ body {
     padding-bottom: 5px;
 }
 
+div.prodshortdesc {
+    width:240px;
+}
+
 .error {
     clear:both;
 }
@@ -157,7 +161,10 @@ div.lineBox span.title {
 }
 
 .agb a,
-div.lineBox span.title {
+div.lineBox span.title,
+#backToShop,
+h3.blockHead ,
+#thankyouPage h3.blockHead:first-child {
     color:#5B7531;
 }
 

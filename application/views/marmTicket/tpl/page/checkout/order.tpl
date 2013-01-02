@@ -107,7 +107,6 @@
                             <dl class="orderRemarks">
                                 <dt>Ihre Tickets werden für folgende Teilnehmer registriert:</dt>
                                 <dd>
-                                    [{*assign var="aVisitorData" value=$oxcmp_basket->getVisitorData()*}]
                                     [{foreach from=$oxcmp_basket->getVisitorData() item="visitor" key="number"}]
                                         <div class="visitorshortview">
                                             <strong>[{$number-1}]. Teilnemer</strong><br />
