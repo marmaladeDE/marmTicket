@@ -633,7 +633,7 @@
                 <h3 style="font-weight: bold; margin: 20px 0 7px; padding: 0; line-height: 35px; font-size: 12px;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase; border-bottom: 4px solid #ddd;">
                     Teilnehmerdaten:
                 </h3>
-                    [{foreach from=$oxcmp_basket->getVisitorData() item="visitor" key="number"}]
+                    [{foreach from=$basket->getVisitorData() item="visitor" key="number"}]
                     <p style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin: 5px 0 10px;">
                         <strong>[{$number-1}]. Teilnemer</strong><br />
                         <span>Name:</span>[{$visitor.fname}] [{$visitor.lname}]<br />
