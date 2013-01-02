@@ -21,7 +21,7 @@
             <option value="L">L</option>
             <option value="XL">XL</option>
         </select>
-            [{if $i > $oxcmp_basket->getItemsCount()}]
+            [{if $i > $oxcmp_basket->getTicketCount()}]
                 [{assign var="repeat" value=false}]
             [{/if}]
     </div>
