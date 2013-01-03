@@ -27,7 +27,7 @@
             <a href="[{if $oxcmp_user}][{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=payment" }][{else}]#[{/if}]" title="Zahlart wählen" [{if $active == 3}]class="active"[{elseif $active > 3}]class="passed"[{/if}]><strong>4.</strong><br />Zahlungsart</a>
         </li>
         <li>
-            <a href="[{if $oxcmp_user}][{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=order" }][{else}]#[{/if}]" title="Bestellbestätigung" [{if $active == 4}]class="active"[{elseif $active > 4}]class="passed"[{/if}]><strong>5.</strong><br />Abschluß</a>
+            <a href="[{if $oxcmp_user}][{ oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=order" }][{else}]#[{/if}]" title="Bestellbestätigung" [{if $active == 4}]class="active"[{elseif $active > 4}]class="passed"[{/if}]><strong>5.</strong><br />Abschluss</a>
         </li>
     </ul>
 </div>
