@@ -175,7 +175,7 @@
                     [{/block}]
                 [{else}]
                     [{block name="checkout_order_btn_confirm_bottom"}]
-                        <form action="[{ $oViewConf->getSslSelfLink() }]" method="post" id="orderConfirmAgbBottom">
+                        <form action="[{ $oViewConf->getSslSelfLink() }]" method="post" target="_top" id="orderConfirmAgbBottom">
                             [{ $oViewConf->getHiddenSid() }]
                             [{ $oViewConf->getNavFormParams() }]
                             <input type="hidden" name="cl" value="order">
