@@ -21,6 +21,15 @@
             <option value="L" [{if $aVisitorData.$i.tshirt == 'L'}]selected="selected"[{/if}]>L</option>
             <option value="XL" [{if $aVisitorData.$i.tshirt == 'XL'}]selected="selected"[{/if}]>XL</option>
         </select>
+        <label for="system[{$i}]">Shopsystem:</label>
+        <select id="system[{$i}]" name="persparam[[{$i}]][system]">
+            <option value="Magento" [{if $aVisitorData.$i.system == 'Magento'}]selected="selected"[{/if}]>Magento</option>
+            <option value="OXID" [{if $aVisitorData.$i.system == 'OXID'}]selected="selected"[{/if}]>OXID</option>
+            <option value="osCommerce" [{if $aVisitorData.$i.system == 'osCommerce'}]selected="selected"[{/if}]>osCommerce</option>
+            <option value="Shopware" [{if $aVisitorData.$i.system == 'Shopware'}]selected="selected"[{/if}]>Shopware</option>
+            <option value="XTCommerce" [{if $aVisitorData.$i.system == 'XTCommerce'}]selected="selected"[{/if}]>XTCommerce</option>
+            <option value="anderes" [{if $aVisitorData.$i.system == 'anderes'}]selected="selected"[{/if}]>Anderes</option>
+        </select>
             [{if $i > $oxcmp_basket->getTicketCount()}]
                 [{assign var="repeat" value=false}]
             [{/if}]
