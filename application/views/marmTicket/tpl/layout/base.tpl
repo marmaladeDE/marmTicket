@@ -75,8 +75,13 @@
         [{$_block}]
     [{/foreach}]
     [{oxstyle}]
+    <script type="text/javascript">
+        function updateParent() {
+         parent.updateIframeSize('ticketShop', $('html').height());
+        }
+    </script>
 </head>
-<body>
+<body onload="updateParent()" onclick="updateParent()">
     [{foreach from=$oxidBlock_pageBody item="_block"}]
         [{$_block}]
     [{/foreach}]
