@@ -11,6 +11,8 @@
             [{/foreach}]
         </div>
     </div>
+    <br />
+    <br />
     [{if $oView->isPriceCalculated() }]
         [{block name="layout_page_vatinclude"}]
         [{oxifcontent ident="oxdeliveryinfo" object="oCont"}]
