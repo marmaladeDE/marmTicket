@@ -40,9 +40,23 @@
                                         <input type="hidden" name="CustomError" value='basket'>
                                     </div>
                                 </form>
+                                [{block name="checkout_basketcontents_voucherdiscount"}]
+                                    [{if $oViewConf->getShowVouchers() && $oxcmp_basket->getVoucherDiscValue() }]
+                                        [{foreach from=$oxcmp_basket->getVouchers() item=sVoucher key=key name=Voucher}]
+                                           <div class="couponData">
+                                                <strong>[{ oxmultilang ident="PAGE_CHECKOUT_BASKETCONTENTS_COUPON" }]:</strong>
+                                                &nbsp;"[{ $sVoucher->sVoucherNr }]"&nbsp;
+                                                <strong>(-[{ $sVoucher->fVoucherdiscount }]&nbsp;[{ $currency->sign }])</strong>
+                                            </div>
+                                        [{/foreach }]
+                                    [{/if }]
+                                [{/block}]
                             </div>
                         [{/block}]
                     [{/if}]
+                    
+                    
+                    
                 <form action="[{ $oViewConf->getSslSelfLink() }]" method="post">
                     [{include file="page/checkout/inc/visitordata.tpl" editable=true}]
                     [{ $oViewConf->getHiddenSid() }]
