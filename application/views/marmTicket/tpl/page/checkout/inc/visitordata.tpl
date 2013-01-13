@@ -23,6 +23,7 @@
         </select>
         <label for="system[{$i}]">Shopsystem:</label>
         <select id="system[{$i}]" name="persparam[[{$i}]][system]">
+            <option value="not defined" [{if $aVisitorData.$i.system == 'not defined'}]selected="selected"[{/if}]>bitte wählen</option>
             <option value="Magento" [{if $aVisitorData.$i.system == 'Magento'}]selected="selected"[{/if}]>Magento</option>
             <option value="OXID" [{if $aVisitorData.$i.system == 'OXID'}]selected="selected"[{/if}]>OXID</option>
             <option value="osCommerce" [{if $aVisitorData.$i.system == 'osCommerce'}]selected="selected"[{/if}]>osCommerce</option>
