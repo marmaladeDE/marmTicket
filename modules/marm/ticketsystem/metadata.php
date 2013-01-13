@@ -31,6 +31,7 @@ $aModule = array(
     'extend'        => array(
         'oxbasket'      => 'marm/ticketsystem/application/model/marm_ticketsystem_oxbasket',
         'oxcmp_basket'  => 'marm/ticketsystem/application/controller/marm_ticketsystem_oxcmp_basket',
+        'oxorder'       => 'marm/ticketsystem/marmticket_myorder',
     ),
   
     'files'         => array(
