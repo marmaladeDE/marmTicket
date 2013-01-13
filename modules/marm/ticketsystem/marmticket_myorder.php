@@ -645,9 +645,26 @@ class marmticket_myorder extends marmticket_myorder_parent{
 
         $oArtSumm->run( $oPdf );
         $siteH += $iHeight + 8;
-
+        
+        // set Visitordata to PDF
+        $aVisitorData = unserialize( $this->oxorder__oxremark->rawValue );
+        
+        $oPdf->text( 15, $siteH, 'Ticket(s) gültig für folgende Teilnehmer:' );
+        $siteH += 10;
+        $vNr = 1;
+        foreach( $aVisitorData as $visitor )
+        {
+            $oPdf->text( 15, $siteH, 'Teilnehmer '. $vNr .':' );
+            $oPdf->text( 45, $siteH, $visitor['fname'].' '.$visitor['lname'].' ('.$visitor['position'].')');
+            $oPdf->text( 45, $siteH + 5, 'T-Shirt: '.$visitor['tshirt']);
+            $siteH += 10;
+            $vNr++;
+        }
+        
+        $siteH += 10;
         $oPdf->text( 15, $siteH, $this->translate( 'ORDER_OVERVIEW_PDF_GREETINGS' ) );
     }
+    
     
     protected function _setOrderArticlesToPdf( $oPdf, &$iStartPos, $blShowPrice = true )
     {
