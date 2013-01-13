@@ -441,7 +441,7 @@ class marmPdfArticleSummary extends PdfBlock
         $oPayment = oxNew( 'oxpayment' );
         $oPayment->loadInLang( $this->_oData->getSelectedLang(), $this->_oData->oxorder__oxpaymenttype->value );
 
-        $text = $this->_oData->translate( 'ORDER_OVERVIEW_PDF_SELPAYMENT' ).$oPayment->oxpayments__oxdesc->value;
+        $text = $this->_oData->translate( 'ORDER_OVERVIEW_PDF_SELPAYMENT' ).str_replace('&amp;','&',$oPayment->oxpayments__oxdesc->value);
         $this->font( $this->getFont(), '', 10 );
         $this->text( 15, $iStartPos + 4, $text );
         $iStartPos += 4;
