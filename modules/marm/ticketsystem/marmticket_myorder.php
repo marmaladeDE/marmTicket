@@ -456,7 +456,8 @@ class marmPdfArticleSummary extends PdfBlock
      */
     protected function _setPayUntilInfo( &$iStartPos )
     {
-        $text = $this->_oData->translate( 'ORDER_OVERVIEW_PDF_PAYUPTO' ) . $this->_oData->oxorder__oxbilldate->value; //date( 'd.m.Y', mktime( 0, 0, 0, date ( 'm' ), date ( 'd' ) + 7, date( 'Y' ) ) );
+        $aPayData = explode('-',$this->_oData->oxorder__oxbilldate->value);
+        $text = $this->_oData->translate( 'ORDER_OVERVIEW_PDF_PAYUPTO' ) . $aPayData[2].'.'.$aPayData[1].'.'.$aPayData[0]; //date( 'd.m.Y', mktime( 0, 0, 0, date ( 'm' ), date ( 'd' ) + 7, date( 'Y' ) ) );
         $this->font( $this->getFont(), '', 10 );
         $this->text( 15, $iStartPos + 4, $text );
         $iStartPos += 4;
